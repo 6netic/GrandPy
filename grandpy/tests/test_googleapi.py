@@ -4,8 +4,7 @@ import json
 
 def test_googleapi(monkeypatch):
 	
-	#result = ["7 Cité Paradis, 75010 Paris, France", 48.8748465, 2.3504873]
-	result = ["7 Cité Paradis, 75010 Paris, France", "Cité Paradis", 48.8748465, 2.3504873]
+	result = ["12 Rue des Pains Perdus", "Quartier Lumière", 12, 2.3]
 	
 
 	class MockRequestGet:
@@ -13,8 +12,8 @@ def test_googleapi(monkeypatch):
 		
 		def __init__(self, url, params):
 			self.url = "http://www.internet.com"
-			self.params = {"address": result[0], "key": "dRt0tuyiG1"}
-			#self.status_code = status_code
+			self.params = {"address": "Rue des Deux", "key": "dRt0tuyiG1", "region": "es"}
+			self.status_code = 200
 		
 		
 		def json(self):
@@ -25,51 +24,13 @@ def test_googleapi(monkeypatch):
 								'address_components': [{},{'long_name': result[1]}],
 								'geometry': {'location': {'lat': result[2], 'lng': result[3]}}, 
 							}]
-			}
-			
+			}			
 			return response
 			
 	monkeypatch.setattr("requests.get", MockRequestGet)
 	instance = googleapi.AddressGps()
-	coord = instance.calculation("openclassrooms")
+	coord = instance.calculation("Je cherche un restaurant à Blois")
 	assert result == coord
-
-
-'''
-def test_googleapi(monkeypatch):
-	""" Patching function for Google Api method """
-	result = ['7 Cité Paradis, 75010 Paris, France', 'Cité Paradis', 48.8748465, 2.3504873]
-
-	class MockResponse:
-		
-		def __init__(self):
-			self.url = "https://googlemaps"
-			#self.google_key = "dRt0tuyiG1"
-			self.params = {"address" : "3 rue Monceault", "key" : "dRt0tuyiG1"}
-			#self.sentence = sentence
-			#self.status_code = 200
-			
-
-		def get_google(self, sentence):
-			
-			response_string = json.dumps(result) #Renvoie un type 'str'
-			response_bytes = response_string.encode() #Renvoie un type 'bytes'
-			return response_bytes
-
-
-	def mock_get_infos():
-			return MockResponse()
-
-	monkeypatch.setattr("requests.get", mock_get_infos())
-	#monkeypatch.setattr("grandpy.googleapi.AddressGps.calculation", mock_get_infos())
-	g_result = googleapi.AddressGps()
-	g_result.calculation("openclassrooms")
-	#assert google_result == ['7 Cité Paradis, 75010 Paris, France', 'Cité Paradis', 48.8748465, 2.3504873]
-'''
-
-
-
-
 
 
 

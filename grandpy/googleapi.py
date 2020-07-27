@@ -4,7 +4,6 @@
 import requests, json, os
 
 
-
 class AddressGps:
 	""" This class deals with requesting GoogleMap api """
 
@@ -12,18 +11,17 @@ class AddressGps:
 		""" Initializing the object """
 		
 		self.google_api_url = "https://maps.googleapis.com/maps/api/geocode/json?parameters"
-		self.google_key = "AIzaSyBFwyV7Ne-QtBvFXAgiuI2RjqgcSVBGWaA"
+		self.google_api_key = os.getenv("GOOGLE_API_KEY")
 
 
 	def calculation(self, sentence):
 		""" Returns an address and its coordinates """
 		
 		parameters = {	"address" : sentence, 
-						"key" : self.google_key,
+						"key" : self.google_api_key,
 						"region"	: "fr",
 		}
 		response = requests.get(self.google_api_url, parameters)
-
 		
 		if response.status_code != 200:
 			return False

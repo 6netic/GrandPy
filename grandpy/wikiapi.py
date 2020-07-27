@@ -3,7 +3,7 @@
 
 import requests, json
 
-class PlaceInfo():
+class PlaceInfo:
 	""" This class deals with requesting MediaWiki api """
 
 	def __init__(self):
@@ -22,14 +22,16 @@ class PlaceInfo():
 			"gsradius" : 1000,
 			"gscoord" : "{}|{}".format(latitude, longitude)
 		}
-
+		
 		response = requests.get(self.url, params=params)
-		if response.status_code == 200:
-			content = json.loads(response.content.decode('utf-8'))
-			self.pageid = content["query"]["geosearch"][0]["pageid"]
-			return self.pageid
+		
+		if response.status_code != 200:
+			return False
 		else:
-			print("La requete a donné une erreur")
+			content = response.json()
+			pageid = content["query"]["geosearch"][0]["pageid"]
+			return pageid
+		
 
 
 	def search_description(self, page):
@@ -47,35 +49,14 @@ class PlaceInfo():
 		}
 
 		response = requests.get(self.url, params=param)
-		if response.status_code == 200:
-			#info_search = response.json()
-			content = json.loads(response.content.decode('utf-8'))
-			description = content["query"]["pages"][str(page)]["extract"]
-			#self.extract = info_search["query"]["pages"][str(self.pageid)]["fullurl"]
-			print("Mais t'ai-je déjà raconté l'histoire de ce lieu ?")
-			#self.dictionary_search.append(self.extract)
-			#self.dictionary_search.append(self.fullurl)
-			#print(description)
-			return description
+		
+		if response.status_code != 200:
+			return False
 		else:
-			print("Une erreur est survenue lors de la recherche de la page")
-
-
-
-
-def main():
-	page_search = PlaceInfo()
-	latitude = 48.8748465
-	longitude = 2.3504873
-	pageid = page_search.search_pageid(latitude, longitude)
-	page_search.search_description(pageid)
-
-
-if __name__ == '__main__':
-	main()
-
-
-
+			content = response.json()
+			description = content["query"]["pages"][str(page)]["extract"]
+			return description
+		
 
 
 
