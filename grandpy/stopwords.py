@@ -50,7 +50,7 @@ def stopWordList():
 				"uns","v","va","vais","vas","vers","via","vif","vifs","vingt","vivat","vive","vives","vlan","voici","voilà","vont","vos",
 				"votre","vous","vous-mêmes","vu","vé","vôtre","vôtres","w","x","y","z","zut","à","â","ça","ès","étaient","étais","était",
 				"étant","été","être","ô","salut", "grandpy","connais","connais-tu","est-ce","adresse","adresses","vas-tu","allez-vous",
-				"tu vas","vous allez"
+				"tu vas","vous allez","sais-tu","trouve"
 				]
 	return wordslist
 

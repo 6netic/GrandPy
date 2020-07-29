@@ -1,0 +1,55 @@
+
+body {
+	background-color: #fefde6;
+}
+.ending {
+	height :40px;
+	width : 100%;
+	background-color: #343a40;
+	position : fixed;
+	bottom : 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+#box0 {
+	margin-top: 30px;
+}
+
+#box2 {
+	margin-bottom: 60px;
+}
+.question {
+	font-family: "Lucida Console", Courier, monospace;
+	font-style: italic;
+	font-size: 1em;
+	color: blue;
+}
+.robotresponse {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	color: #5f5f5f;
+}
+.address {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	font-size: italic;
+	text-decoration: underline;
+	color: #5f5f5f;
+}
+iframe {
+	width: 80%;
+	height: 65%;
+	border: 1px solid  #bbbaba;
+}
+p.bloc1 {
+	width: 60%;
+	background-color:  #f7f6f1;/*#efefef;*/
+	border: 2px solid grey;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+}

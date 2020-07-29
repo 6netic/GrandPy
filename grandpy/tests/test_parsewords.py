@@ -5,8 +5,8 @@ from grandpy import parsewords
 def test_if_sentence_to_lower():
 	""" this function tests if a sentence can be converted to lower case """
 	parse = parsewords.Parse()
-	result = parse.transform_sentence_to_lower_without_apostrophes("BADI BOUM")
-	assert result == "badi boum"
+	result = parse.transform_sentence_to_lower_without_apostrophes("Adresse Du Thyrse")
+	assert result == "adresse du thyrse"
 
 
 def test_if_sentence_without_d():
@@ -41,11 +41,7 @@ def test_if_sentence_in_cleaned_list():
 	""" This function tests if sentence can be cleaned up """
 	parse = parsewords.Parse()
 	result = parse.create_new_sentence(["salut", "grandpy", "est-ce", "que", "tu", "connais", "adresse", "openclassrooms"])
-	assert result == ["openclassrooms"]
-
-
-
-
+	assert result == "openclassrooms"
 
 
 

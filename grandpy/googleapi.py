@@ -38,17 +38,6 @@ class AddressGps:
 			coord.append(latitude)
 			coord.append(longitude)
 			return coord
-		
-		
-			
-
-
-
-
-
-
-
-
 
 
 

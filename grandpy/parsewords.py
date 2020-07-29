@@ -4,7 +4,6 @@
 from grandpy import stopwords
 
 
-
 class Parse:
 	""" This class gives the tools to parse the question """
 
@@ -39,10 +38,11 @@ class Parse:
 		""" This method creates a new sentence after removing useless words """
 
 		stop_word_list = stopwords.stopWordList()
-		cleaned_sentence = []
+		old_sentence = []
 		for word in sentence:
 			if word not in stop_word_list:
-				cleaned_sentence.append(word)
+				old_sentence.append(word)
+		cleaned_sentence = " ".join(old_sentence)
 		return cleaned_sentence
 
 

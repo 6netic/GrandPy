@@ -75,10 +75,10 @@ def test_wikiapi_description(monkeypatch):
 					"batchcomplete":"",
 					"query":{
 					"pages":
-					{"5092567":{
-						"pageid":5092567,
+					{"5093":{
+						"pageid":5093,
 						"ns":0,
-						"title":"Tillandsia araujei",
+						"title":"Tillandsia araujei tulius",
 						"extract":"Imaginons que cette phrase soit relativement longue..."
 						},
 					}
@@ -89,7 +89,7 @@ def test_wikiapi_description(monkeypatch):
 			
 	monkeypatch.setattr("requests.get", MockRequestGet)
 	instance = wikiapi.PlaceInfo()
-	description = instance.search_description(5092567)
+	description = instance.search_description(5093)
 	assert result == description
 
 
