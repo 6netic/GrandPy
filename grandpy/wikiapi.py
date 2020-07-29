@@ -43,7 +43,7 @@ class PlaceInfo:
 			"prop" : "extracts",
 			"exsectionformat" : "plain",
 			"exlimit" : 1,
-			"exchars" : 400,
+			"exchars" : 450,
 			"explaintext" : True,
 			"pageids" : page
 		}
