@@ -20,8 +20,8 @@ class Parse:
 	def remove_special_characters_from_list(self, sentence):
 		""" This method removes all special characters from sentence """
 		
-		intab = "?,:;._!"
-		outtab = "       "
+		intab = "?,:;._!<>%"
+		outtab = "          "
 		trantab = str.maketrans(intab, outtab)
 		sentence = sentence.translate(trantab)
 		return sentence
