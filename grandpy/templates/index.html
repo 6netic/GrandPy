@@ -10,17 +10,19 @@
 	
 	<title>GrandPy-App</title>
 
-<!-- Bootstrap Core CSS  -->
+<!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<!-- Custom styles for this template -->
+    
+<!-- Custom styles for this template -->	
 	<link href="{{ url_for('static', filename='css/grandpy.css') }}" rel="stylesheet">
 </head>
 
+<!-- class='d-inline-block align-left' -->
+
 <body id="page-top">
 	<header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-		<a class="navbar-brand" href="#" style="font-size: 1.7em;font-weight: bold">
-			<img src="{{ url_for('static', filename='img/robot.png') }}" 
-			class='d-inline-block align-left' alt='Grandpy Logo'>GrandPy - Le Bot Papy-Robot!</a>
+			<img src="{{ url_for('static', filename='img/robot.png') }}" alt='Grandpy Logo'></a>
+			<span id="title">GrandPy - Le Bot Papy-Robot!</span>
     </header> 
     <p><br /></p>
 	<div id="chartContainer" align="center"> />
@@ -28,7 +30,8 @@
 			<br />
 			<div id="box1"> </div>
 				
-			<div id="animation"> </div>			
+			<div id="animation"> </div>	
+					
 			<hr>
 		</div>			
 		<div id="box2">
@@ -36,24 +39,24 @@
 				<p>
 					<div class="form-group">
 						<label for="mySearch">Veuillez entrer votre question dans le champ :</label><br />
-						<input type="text" name="mySearch" id="mySearch" maxlength="80" size="60">
+						<input type="text" name="mySearch" id="mySearch" maxlength="80" style="width: 40%;">
 						<input type="submit" class="btn-default" value="Chercher"/>
 					</div>
 				</p>
 			</form>
 		</div>
 	</div>
-	
+
 	<footer class="ending">
 		<span class="m-0 text-center text-white">Eric Bresler - Source : https://github.com/6netic/GrandPy</span>
+
 	</footer>
-	<script type="text/javascript">var key = '{{ data.google_api_key }}'</script> 
+
+	<script type="text/javascript">var key = '{{ data.google_api_key }}'</script>
 	<script type="text/javascript" src="{{url_for('static', filename='js/grandpy.js')}}"></script>
 
 </body>
 </html>
-
-
 
 
 

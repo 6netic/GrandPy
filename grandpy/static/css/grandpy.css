@@ -1,6 +1,15 @@
 
 body {
 	background-color: #fefde6;
+	height: 100%;
+	
+
+}
+#title {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 1.7em;
+	font-weight: bold;
+	color: #ffffff;
 }
 .ending {
 	height :40px;
@@ -13,9 +22,8 @@ body {
 	text-align: center;
 }
 #box0 {
-	margin-top: 30px;
+	margin-top: 15px;
 }
-
 #box2 {
 	margin-bottom: 60px;
 }
@@ -43,13 +51,13 @@ iframe {
 	height: 65%;
 	border: 1px solid  #bbbaba;
 }
-p.bloc1 {
+.bloc1 {
 	width: 60%;
-	background-color:  #f7f6f1;/*#efefef;*/
-	border: 2px solid grey;
+	background-color: #ffffff; /*#f8f8f8; #f7f6f1;#efefef;*/
+	border: 1px solid #a9a9a9;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
 	padding-top: 10px;
-
 }
+
