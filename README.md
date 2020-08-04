@@ -24,6 +24,7 @@ For that, type in the following from your console:
 It's adviced to work in a virtual environment.
 
 After being activated, go to the root of the repository and install the requirements by typing in the console:
+
 `pip3 install -r requirements.txt`
 
 Then, you need to create an environment file called .env in which you will store environment variables in the root of the repository.
