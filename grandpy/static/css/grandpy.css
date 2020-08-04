@@ -2,12 +2,10 @@
 body {
 	background-color: #fefde6;
 	height: 100%;
-	
-
 }
 #title {
 	font-family: Verdana, Helvetica, sans-serif;
-	font-size: 1.7em;
+	font-size: 0.8em;
 	font-weight: bold;
 	color: #ffffff;
 }
@@ -20,9 +18,12 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	text-align: center;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 0.7em;
+	color: #ffffff;
 }
 #box0 {
-	margin-top: 15px;
+	margin-top: 45px;
 }
 #box2 {
 	margin-bottom: 60px;
@@ -53,11 +54,43 @@ iframe {
 }
 .bloc1 {
 	width: 60%;
-	background-color: #ffffff; /*#f8f8f8; #f7f6f1;#efefef;*/
+	background-color: #ffffff;
 	border: 1px solid #a9a9a9;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
+#myForm {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #e4e4e4;
+	border: 1px solid #a9a9a9;
+	border-radius: 6px;
+	width: 60%;
+	font-size: 0.8em;
+}
+
+@media (min-width: 576px) {
+    #title {
+        font-size: 1.4em;
+    }
+    .ending {
+    	font-size: 0.8em;
+    }
+}
+
+@media (min-width: 768px) {
+    #title {
+        font-size: 1.7em;
+    }
+    .ending {
+    	font-size: 1em;
+    }
+}
+
+
+
 

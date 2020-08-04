@@ -11,7 +11,8 @@ htmlcov/
 dist/
 build/
 *.egg-info/
-/grandpy/static/js/grandpy_temp.js
-/grandpy/templates/index_temp2.html
+grandpy/templates/index_temp1.html
+grandpy/static/js/grandpy_temp.js
+grandpy/templates/index_temp2.html
 grandpy/static/css/bootstrap/
 grandpy/__pycache__/
